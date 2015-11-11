@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Workspaces\Eclipse\GranTurismoLapTimer\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
+        <dex dex="E:\Workspaces\Eclipse\GranTurismoLapTimer\build\intermediates\pre-dexed\debug\android-support-v4-1e1b4ab2f1d2e87368ffea8a9d119e2aecf984c7.jar" />
+    </item>
+    <item
+        jar="E:\Workspaces\Eclipse\GranTurismoLapTimer\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="E:\Workspaces\Eclipse\GranTurismoLapTimer\build\intermediates\pre-dexed\debug\gson-2.2.4-1ee2dcd8b6806df707579a196c1698983eae7c39.jar" />
+    </item>
+
+</items>

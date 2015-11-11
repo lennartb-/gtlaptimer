@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/E:/Workspaces/Eclipse/GranTurismoLapTimer/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/E:/Workspaces/Eclipse/GranTurismoLapTimer/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="about_box">GTLapTimer by L.B.\n\n Developed with IntelliJ IDEA on a Nexus 7 \n\n The background texture is part of the free Graphite
+        Texture Pack by Enigma Design: http://enigma-design.deviantart.com/art/Graphite-Texture-Pack-91094259 \n\n I do not own any of the brands or
+        names used in this application. This is a purely fan-made app to appreciate and support the GT series.
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">Gran Turismo Lap Timer</string>
+    <string name="greeting">Select the game to save laptimes for</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_car_selection">Car Selection</string>
+    <string name="title_activity_track_selection">Track Selection</string>
+    <!-- From: file:/E:/Workspaces/Eclipse/GranTurismoLapTimer/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="android:Theme.DeviceDefault">
+    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <item name="android:textColor">#ffffffff</item>
+</style>
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:minEms">10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">15dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+    <style name="ButtonTextSmall">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:minEms">10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+    <style name="SubButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:minEms">10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+    <style name="SubButtonTextSmall">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:minEms">10</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">3</item>
+    </style>
+</resources>

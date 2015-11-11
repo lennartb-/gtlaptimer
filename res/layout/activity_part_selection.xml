@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg">
+
+    <TableLayout
+            android:id="@+id/partsTableHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+        <!--suppress AndroidLintUselessParent -->
+
+        <!-- ^Actual content is added programatically later -->
+        <TableRow>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Part Name"
+                    android:textStyle="bold"
+                    android:id="@+id/partNameHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Level"
+                    android:textStyle="bold"
+                    android:id="@+id/partSeekbarHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:textStyle="bold"
+                    android:id="@+id/partLevelHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/scrollView">
+
+        <TableLayout
+                android:id="@+id/partsTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="0"
+                android:stretchColumns="1,2"/>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/toTuning"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:layout_gravity="center"
+            android:background="@drawable/black_button"
+            style="@style/SubButtonText"/>
+</LinearLayout>

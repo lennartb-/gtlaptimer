@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/tuninglayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg">
+
+    <TableLayout
+            android:id="@+id/tuningTableHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+        <!--suppress AndroidLintUselessParent -->
+
+        <!-- ^Actual content is added programatically later -->
+        <TableRow>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Part Name"
+                    android:textStyle="bold"
+                    android:id="@+id/tuningNameHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Level"
+                    android:textStyle="bold"
+                    android:id="@+id/tuningSeekbarHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:textStyle="bold"
+                    android:id="@+id/tuningLevelHeader"
+                    android:layout_gravity="center_horizontal|top"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/scrollViewTuning">
+
+        <TableLayout
+                android:id="@+id/tuningTable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shrinkColumns="*"
+                android:stretchColumns="*"/>
+
+    </ScrollView>
+
+    <Button
+            android:id="@+id/toTime"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:layout_gravity="center"
+            android:background="@drawable/black_button"
+            style="@style/SubButtonText"/>
+</LinearLayout><!-- From: file:/E:/Workspaces/Eclipse/GranTurismoLapTimer/res/layout/activity_tuning_selection.xml -->

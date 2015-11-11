@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\Workspaces\Eclipse\GranTurismoLapTimer\assets"><file name="gtlaptimer.db" path="E:\Workspaces\Eclipse\GranTurismoLapTimer\assets\gtlaptimer.db"/></source></dataSet><dataSet config="debug"><source path="E:\Workspaces\Eclipse\GranTurismoLapTimer\build-types\debug\assets"/></dataSet></merger>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.lennartb.gtlaptimer"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bg2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.lennartb.gtlaptimer.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.lennartb.gtlaptimer.TrackSelection"
+            android:label="Select the track" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.CarSelection"
+            android:label="Select the car" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.PartSelection"
+            android:label="Select upgrade parts" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.TuningSelection"
+            android:label="Enter Tuning Parameters"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.TimeEntry"
+            android:label="Enter the time"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.ActionSelection"
+            android:label="Select Action" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.TimeBrowser"
+            android:label="Times" />
+        <activity
+            android:name="org.lennartb.gtlaptimer.SettingsOverview"
+            android:label="Overview" />
+        <activity android:name="org.lennartb.gtlaptimer.OptionMenuActivity" />
+    </application>
+
+</manifest>

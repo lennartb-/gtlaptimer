@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gran Turismo Lap Timer</string>
+    <string name="action_settings">Settings</string>
+    <string name="greeting">Select the game to save laptimes for</string>
+    <string name="title_activity_track_selection">Track Selection</string>
+    <string name="title_activity_car_selection">Car Selection</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="about_box">GTLapTimer by L.B.\n\n Developed with IntelliJ IDEA on a Nexus 7 \n\n The background texture is part of the free Graphite
+        Texture Pack by Enigma Design: http://enigma-design.deviantart.com/art/Graphite-Texture-Pack-91094259 \n\n I do not own any of the brands or
+        names used in this application. This is a purely fan-made app to appreciate and support the GT series.
+    </string>
+
+</resources>

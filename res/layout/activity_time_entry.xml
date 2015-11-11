@@ -1,0 +1,163 @@
+<!--suppress AndroidLintNestedScrolling -->
+<!--There really isn't an alternative to an adapter-backed ListView at the moment -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg"
+              android:focusableInTouchMode="true">
+    <!-- The LinearLayout has been made focusableInTouchMode to prevent the
+    EditText gaining focus on startup and automatically scrolling down to it. -->
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/overview"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:focusableInTouchMode="true"/>
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:id="@+id/scrollViewMain"
+            android:layout_gravity="center">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <!-- Upper part, where latest and top times are displayed -->
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/topTimesText"
+                    android:textSize="12sp"
+                    android:gravity="left"
+                    android:text="Top Times"/>
+
+            <ListView
+                    android:id="@+id/topTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/latestTimesText"
+                    android:textSize="12sp"
+                    android:gravity="left"
+                    android:text="Latest Times"/>
+
+            <ListView
+                    android:id="@+id/latestTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <!-- Horizontal layout for NumberPickers -->
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:orientation="horizontal"
+                          android:id="@+id/pickerLayout"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center_vertical|center_horizontal">
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tenMinutePicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/oneMinutePicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/minuteSeparator"
+                        android:text="m"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tenSecondPicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/oneSecondPicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/secondsSeparator"
+                        android:text="s"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tenthMillisecondPicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hundredthMillisecondPicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <NumberPicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/thousandsMillisecondPicker"
+                        android:max="9"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/milliSecondsSeparator"
+                        android:text="ms"
+                        android:layout_gravity="center_vertical|center_horizontal"/>
+            </LinearLayout>
+
+            <EditText
+                    android:id="@+id/commentBox"
+                    android:hint="Enter optional comment..."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="5"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/addTime"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Time"
+            android:background="@drawable/black_button"
+            style="@style/SubButtonText"
+            android:layout_gravity="center"
+            />
+</LinearLayout>

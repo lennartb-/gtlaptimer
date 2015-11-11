@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/carbon_bg"
+            android:id="@+id/scrollViewMain">
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/trackSelectorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="30sp"
+                android:textColor="#ffffff"
+                android:text="Select the game"/>
+
+        <Button
+                android:id="@+id/gt3button"
+                android:onClick="onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gran Turismo 3"
+                android:background="@drawable/black_button"
+                android:layout_below="@+id/trackSelectorText"
+                android:layout_alignParentLeft="true"
+                style="@style/ButtonText"/>
+
+        <Button
+                android:id="@+id/gt4button"
+                android:onClick="onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_button"
+                style="@style/ButtonText"
+                android:layout_below="@+id/trackSelectorText"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/gt3button"
+                android:text="Gran Turismo 4"/>
+
+        <Button
+                android:id="@+id/gt5button"
+                android:onClick="onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_button"
+                style="@style/ButtonText"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/gt3button"
+                android:text="Gran Turismo 5"/>
+
+        <Button
+                android:id="@+id/gt0button"
+                android:onClick="onClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@+id/gt5button"
+                android:background="@drawable/black_button"
+                android:layout_below="@+id/gt4button"
+                style="@style/ButtonText"
+                android:text="Gran Turismo PSP"/>
+    </RelativeLayout>
+</ScrollView>
+
+<!-- From: file:/E:/Workspaces/Eclipse/GranTurismoLapTimer/res/layout-land/activity_main.xml -->
