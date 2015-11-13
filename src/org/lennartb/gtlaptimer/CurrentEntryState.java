@@ -49,6 +49,7 @@ public class CurrentEntryState implements EntryState
         return trackId;
     }
 
+    @Override
     public void setTrackId(int trackId)
     {
         this.trackId = trackId;
@@ -60,6 +61,7 @@ public class CurrentEntryState implements EntryState
         return isTrackReverse;
     }
 
+    @Override
     public void setTrackReverse(boolean trackReverse)
     {
         isTrackReverse = trackReverse;

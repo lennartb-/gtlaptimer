@@ -2,7 +2,6 @@ package org.lennartb.gtlaptimer;
 
 import android.app.FragmentManager;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,25 +10,27 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.*;
+import org.lennartb.gtlaptimer.Enums.Action;
 import org.lennartb.gtlaptimer.Helpers.DBHelper;
 import org.lennartb.gtlaptimer.Helpers.DBQueries;
 import org.lennartb.gtlaptimer.Helpers.DialogCreator;
+import org.lennartb.gtlaptimer.Services.EntryStateProvider;
 
 public class TrackSelection extends OptionMenuActivity implements DialogCreator.DialogCreatorListener, AdapterView.OnItemClickListener {
 
-    private SharedPreferences preferences;
+
     private ListView tracklist;
     private RelativeLayout layout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        preferences = getSharedPreferences(MainActivity.PACKAGE_NAME, MODE_PRIVATE);
         setContentView(R.layout.activity_track_selection);
         layout = (RelativeLayout) findViewById(R.id.trackSelector);
 
         // Get tracks for selected game.
-        int game = preferences.getInt("Game", -1);
+
+        int game = EntryStateProvider.getInstance().getGame().getValue();
         SQLiteDatabase database = DBHelper.getInstance(this).getDatabase();
         Cursor tracks = DBQueries.getTracksForGame(game, database);
 
@@ -51,7 +52,7 @@ public class TrackSelection extends OptionMenuActivity implements DialogCreator.
 
     @Override
     public void onFinishDialog(boolean result) {
-        preferences.edit().putInt("Reverse", result ? 1 : 0).commit();
+        EntryStateProvider.getInstance().setTrackReverse(result);
         runActivity();
     }
 
@@ -71,7 +72,7 @@ public class TrackSelection extends OptionMenuActivity implements DialogCreator.
 
         // Get TrackID of selected track.
         Cursor c = (Cursor) tracklist.getAdapter().getItem(position);
-        preferences.edit().putInt("Track", c.getInt(c.getColumnIndex("_id"))).commit();
+        EntryStateProvider.getInstance().setTrackId(c.getInt(c.getColumnIndex("_id")));
 
         // Determine if a track can be driven in reverse direction, show a dialog to choose which if it's possible.
         if (c.getString(c.getColumnIndex("reversepossible")).equals("true")) {
@@ -84,7 +85,7 @@ public class TrackSelection extends OptionMenuActivity implements DialogCreator.
             reverseDialog.show(fm, "reverse_dialog_fragment");
         }
         else {
-            preferences.edit().putInt("Reverse", 0).commit();
+            EntryStateProvider.getInstance().setTrackReverse(false);
             runActivity();
         }
     }
@@ -96,12 +97,14 @@ public class TrackSelection extends OptionMenuActivity implements DialogCreator.
     private void runActivity() {
 
         Intent activitySelector;
-        if (preferences.getString("Action", "").equals("Browse")) {
+        if (EntryStateProvider.getInstance().getAction() == Action.Browse)
+        {
             activitySelector = new Intent(TrackSelection.this, TimeBrowser.class);
             startActivity(activitySelector);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
-        if (preferences.getString("Action", "").equals("Time")) {
+        if (EntryStateProvider.getInstance().getAction() == Action.NewEntry)
+        {
             activitySelector = new Intent(TrackSelection.this, CarSelection.class);
             startActivity(activitySelector);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

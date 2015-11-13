@@ -13,7 +13,11 @@ public interface EntryState
 
     int getTrackId();
 
+    void setTrackId(int trackid);
+
     boolean isTrackReverse();
+
+    void setTrackReverse(boolean isReverse);
 
     Action getAction();
 
